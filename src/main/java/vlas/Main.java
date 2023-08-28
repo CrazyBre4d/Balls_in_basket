@@ -1,8 +1,8 @@
 package vlas;
 
-import entity.Basket;
-import entity.BasketballBall;
-import entity.TennisBall;
+import vlas.entity.Basket;
+import vlas.entity.BasketballBall;
+import vlas.entity.TennisBall;
 
 public class Main {
     public static void main (String[] args )
