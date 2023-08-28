@@ -45,7 +45,16 @@ public class BasketballBall extends Ball {
     }
 
     @Override
+    public void jump() {
+
+    }
+
+    @Override
     public void blowUp(){
     int a = 1;
+    }
+    @Override
+    public void inflate(){
+        System.out.println("fdf");
     }
 }

@@ -21,7 +21,17 @@ public class TennisBall extends Ball {
     }
 
     @Override
+    public void jump() {
+
+    }
+
+    @Override
     public void blowUp() {
+
+    }
+
+    @Override
+    public void inflate() {
 
     }
 }
