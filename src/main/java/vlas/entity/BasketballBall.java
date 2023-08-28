@@ -46,12 +46,17 @@ public class BasketballBall extends Ball {
 
     @Override
     public void jump() {
+        if (diameter != 0) {
+            System.out.println("Мяч прыгнул!");
+        }
+        else throw new RuntimeException("Мяч порван");
 
     }
 
     @Override
     public void blowUp(){
-    int a = 1;
+    diameter = 0;
+        System.out.println("Мяч взорвался!");
     }
     @Override
     public void inflate(){
