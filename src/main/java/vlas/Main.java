@@ -9,12 +9,14 @@ public class Main {
     {
         try {
         Basket basket = new Basket(9);
-        BasketballBall bs = new BasketballBall("sf",3,true);
-        basket.set(0,bs);
-        TennisBall ball = new TennisBall("blue","ff",5.2);
-       basket.set(1,ball);
-       bs.blowUp();
-       bs.jump();
+        BasketballBall basBall = new BasketballBall("sf",3,true);
+        TennisBall tenBall = new TennisBall("blue","ff",5.2);
+
+        basket.set(0,basBall);
+        basket.set(1,tenBall);
+
+        basBall.blowUp();
+        basBall.jump();
         System.out.println(basket);
         } catch (RuntimeException | NoSuchFieldError e) {
             System.out.println(e);
