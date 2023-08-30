@@ -4,21 +4,22 @@ import java.util.Objects;
 
 public class BasketballBall extends Ball {
 
-    private boolean isAvailable;
     String material;
     double diameter;
+    private boolean isAvailable;
 
     public BasketballBall(String material, double diameter, boolean isAvailable) {
        this.material = material;
        this.diameter = diameter;
        this.isAvailable = isAvailable;
     }
+
     @Override
     public String toString() {
         return "BasketballBall{" +
-                "isAvailable=" + isAvailable +
-                ", material='" + material + '\'' +
+                "material='" + material + '\'' +
                 ", diameter=" + diameter +
+                ", isAvailable=" + isAvailable +
                 '}';
     }
 

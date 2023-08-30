@@ -3,6 +3,7 @@ package vlas.entity;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Objects;
+import java.util.stream.*;
 
 public class Basket {
     private Ball[] balls;

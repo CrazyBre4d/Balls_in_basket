@@ -3,14 +3,15 @@ package vlas.entity;
 import java.util.Objects;
 
 public class TennisBall extends Ball {
-    String color;
     String material;
     double diameter;
+    String color;
 
-    public TennisBall(String color, String material, double diameter) {
-        this.color = color;
+    public TennisBall(String material, double diameter, String color ) {
         this.material = material;
         this.diameter = diameter;
+        this.color = color;
+
     }
 
     @Override
@@ -69,9 +70,9 @@ public class TennisBall extends Ball {
     @Override
     public String toString() {
         return "TennisBall{" +
-                "color='" + color + '\'' +
-                ", material='" + material + '\'' +
+                "material='" + material + '\'' +
                 ", diameter=" + diameter +
+                ", color='" + color + '\'' +
                 '}';
     }
 }
