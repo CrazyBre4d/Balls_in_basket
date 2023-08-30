@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class TennisBall extends Ball {
 
-    String color;
+     private String color;
 
     public TennisBall(String material, double diameter, String color ) {
         super(material,diameter);
