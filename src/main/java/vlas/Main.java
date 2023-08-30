@@ -14,7 +14,7 @@ public class Main {
             basket.add(new TennisBall("vlas",2,"yellow"));
             basket.add(new BasketballBall("plastic",15,true));
             basket.shuffle();
-            basket.fullClear();
+           // basket.fullClear();
             System.out.println(basket);
             basket.sortWithStream(13);
             basket.diameterSum();
@@ -26,3 +26,7 @@ public class Main {
 }
 // в методы sout не добавлять!
 // использовать add кабы все ячейки массива были заполнены! +
+//методы шаров
+// доделать проверку на исключения
+
+
