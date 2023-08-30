@@ -11,7 +11,7 @@ public class Main {
         try {
         List<Ball> balls = Arrays.asList( new BasketballBall("leather",3,true),
                                           new TennisBall("plastic", 6,"blue"),
-                                          new TennisBall("asdasf", 6,"blue"));
+                                          new TennisBall("asdasf", 6,"red"));
         balls.stream()
                         .sorted(Comparator.comparing(Ball::getMaterial))
                         .collect(Collectors.toList())
