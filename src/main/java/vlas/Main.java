@@ -1,7 +1,6 @@
 package vlas;
 
 import vlas.entity.*;
-
 import java.util.*;
 import java.util.stream.*;
 
@@ -20,6 +19,5 @@ public class Main {
         } catch (RuntimeException | NoSuchFieldError e) {
             System.out.println(e);
       }
-
     }
 }
