@@ -3,32 +3,14 @@ package vlas.entity;
 import java.util.Objects;
 
 public class TennisBall extends Ball {
-    String material;
-    double diameter;
+
     String color;
 
     public TennisBall(String material, double diameter, String color ) {
-        this.material = material;
-        this.diameter = diameter;
+        super(material,diameter);
         this.color = color;
 
     }
-
-    @Override
-    public void jump() {
-
-    }
-
-    @Override
-    public void blowUp() {
-
-    }
-
-    @Override
-    public void inflate() {
-
-    }
-
     public String getColor() {
         return color;
     }
@@ -52,6 +34,22 @@ public class TennisBall extends Ball {
     public void setDiameter(double diameter) {
         this.diameter = diameter;
     }
+    @Override
+    public void jump() {
+
+    }
+
+    @Override
+    public void blowUp() {
+
+    }
+
+    @Override
+    public void inflate() {
+
+    }
+
+
 
 
     @Override

@@ -9,6 +9,11 @@ public class Basket {
     private Ball[] balls;
     private int capacity;
 
+    public Basket() {
+        this.balls = new Ball[capacity];
+        this.capacity = balls.length;
+    }
+
     public Ball[] getBalls() {
         return balls;
     }
@@ -18,11 +23,6 @@ public class Basket {
 
     public void setBalls(Ball[] balls) {
         this.balls = balls;
-    }
-
-    public Basket() {
-        this.balls = new Ball[capacity];
-        this.capacity = balls.length;
     }
 
     public Basket(int capacity) {

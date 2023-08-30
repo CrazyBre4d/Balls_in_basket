@@ -1,10 +1,13 @@
 package vlas.entity;
 
 public abstract class Ball {
-    String material;
-    double diameter;
 
-    public Ball( ) {
+   protected String material;
+   protected double diameter;
+
+    public Ball(String material, double diameter) {
+        this.material = material;
+        this.diameter = diameter;
     }
 
     public String getMaterial() {
