@@ -9,7 +9,6 @@ public class TennisBall extends Ball {
     public TennisBall(String material, double diameter, String color ) {
         super(material,diameter);
         this.color = color;
-
     }
     public String getColor() {
         return color;
@@ -48,9 +47,6 @@ public class TennisBall extends Ball {
     public void inflate() {
 
     }
-
-
-
 
     @Override
     public boolean equals(Object o) {

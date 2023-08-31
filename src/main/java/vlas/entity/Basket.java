@@ -42,16 +42,12 @@ public class Basket {
             throw new NoSuchElementException("remove: No such cell exists");
         }
     }
-    public void add(Ball value) { //fix клонирование первого элемента
-        for (int i = 0; i < balls.length; i++) {
-            if (balls[i] == null) {
-                balls[i] = value;
-                break;
-            }
+    public void set(int index, Ball value) {
+        if (index >= 0 && index < balls.length) {
+            balls[index] = value;
+        } else {
+            throw new IndexOutOfBoundsException("set: No such cell exists");
         }
-        Ball[] newBall = Arrays.copyOf(balls, balls.length + 1);
-        newBall[newBall.length - 1] = value;
-        balls = newBall;
     }
     public void fullClear() {
         for (int i = 0; i < balls.length; i++) {
@@ -59,33 +55,37 @@ public class Basket {
         }
     }
 
-    public void sortWithStream(int sortNumber){
-        List<Ball> basket = Arrays.asList(balls);
-        boolean a = basket.isEmpty();
-        if (a = true) {
-            throw new  NoSuchElementException("sortWithStream: Fill the array");
+    public List<Ball> sortWithStream(int sortNumber) {
+        for (int i = 0; i < balls.length; i++) {
+           if (balls[i] == null) {throw new NoSuchElementException("sortWithStream: Fill the array");}
         }
-        basket.stream()
-                .filter(ball->ball.getDiameter()>sortNumber).forEach(ball->System.out.printf(String.valueOf(ball))); //"Шары с диаметром ,больше %d: %s ", sortNumber,  //error
+
+        List<Ball> basket = Arrays.asList(balls);
+        List<Ball> sortedBalls = basket.stream()
+                .filter(ball -> ball.getDiameter() > sortNumber)
+                .collect(Collectors.toList());
+
+        return sortedBalls;
     }
-    public void diameterSum(){
-        List<Ball> basket = Arrays.asList(balls);
-        basket.isEmpty();
-        if (true) {
-            throw new  NoSuchElementException("diameterSum: Fill the array");
+    public double diameterSum(){
+        for (int i = 0; i < balls.length; i++) {
+            if (balls[i] == null) {throw new NoSuchElementException("sortWithStream: Fill the array");}
         }
+
+        List<Ball> basket = Arrays.asList(balls);
         double sum = basket.stream()
                 .mapToDouble(Ball::getDiameter)
                 .sum();
-        System.out.printf("\nСуммарный диаметр: %f",sum);  // УБРАТЬ
+        return sum;
     }
-    public void shuffle(){
-        List<Ball> basket = Arrays.asList(balls);
-        if (basket.isEmpty()) {
-            throw new  NoSuchElementException("sortWithStream: Fill the array");
+    public List<Ball> shuffle(){
+        for (int i = 0; i < balls.length; i++) {
+            if (balls[i] == null) {throw new NoSuchElementException("sortWithStream: Fill the array");}
         }
+
+        List<Ball> basket = Arrays.asList(balls);
         Collections.shuffle(basket);
-        System.out.println(basket);
+        return basket;
     }
 
     @Override
