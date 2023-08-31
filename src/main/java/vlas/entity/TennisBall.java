@@ -7,7 +7,8 @@ public class TennisBall extends Ball {
      private String color;
 
     public TennisBall(String material, double diameter, String color ) {
-        super(material,diameter);
+        super.diameter = diameter;
+        super.material = material;
         this.color = color;
     }
     public String getColor() {
@@ -18,21 +19,6 @@ public class TennisBall extends Ball {
         this.color = color;
     }
 
-    public String getMaterial() {
-        return material;
-    }
-
-    public void setMaterial(String material) {
-        this.material = material;
-    }
-
-    public double getDiameter() {
-        return diameter;
-    }
-
-    public void setDiameter(double diameter) {
-        this.diameter = diameter;
-    }
     @Override
     public void jump() {
 

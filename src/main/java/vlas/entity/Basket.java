@@ -13,19 +13,18 @@ public class Basket {
         this.capacity = balls.length;
     }
 
+    public Basket(int capacity) {
+        balls = new Ball[capacity];
+    }
+
     public Ball[] getBalls() {
         return balls;
     }
     public int getCapacity() {
         return capacity;
     }
-
     public void setBalls(Ball[] balls) {
         this.balls = balls;
-    }
-
-    public Basket(int capacity) {
-        balls = new Ball[capacity];
     }
 
     public Ball get(int index) {

@@ -4,12 +4,12 @@ import java.util.Objects;
 
 public class BasketballBall extends Ball {
 
-
     private boolean isAvailable;
 
     public BasketballBall(String material, double diameter, boolean isAvailable) {
-       super(material,diameter);
-       this.isAvailable = isAvailable;
+        super.diameter = diameter;
+        super.material = material;
+        this.isAvailable = isAvailable;
     }
     public boolean isAvailable() {
         return isAvailable;
@@ -19,28 +19,12 @@ public class BasketballBall extends Ball {
         isAvailable = available;
     }
 
-    public String getMaterial() {
-        return material;
-    }
-
-    public void setMaterial(String material) {
-        this.material = material;
-    }
-
-    public double getDiameter() {
-        return diameter;
-    }
-
-    public void setDiameter(double diameter) {
-        this.diameter = diameter;
-    }
     @Override
     public void jump() {
         if (diameter != 0) {
             System.out.println("Мяч прыгнул!");
         }
         else throw new RuntimeException("Мяч порван");
-
     }
 
     @Override

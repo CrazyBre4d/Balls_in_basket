@@ -5,10 +5,9 @@ public abstract class Ball {
    protected String material;
    protected double diameter;
 
-    public Ball(String material, double diameter) {
-        this.material = material;
-        this.diameter = diameter;
-    }
+    protected Ball() {}
+
+
 
     public String getMaterial() {
         return material;
